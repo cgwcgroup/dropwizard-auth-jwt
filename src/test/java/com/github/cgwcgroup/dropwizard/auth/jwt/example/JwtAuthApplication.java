@@ -1,6 +1,6 @@
-package com.github.toastshaman.dropwizard.auth.jwt.example;
+package com.github.cgwcgroup.dropwizard.auth.jwt.example;
 
-import com.github.toastshaman.dropwizard.auth.jwt.JwtAuthFilter;
+import com.github.cgwcgroup.dropwizard.auth.jwt.JwtAuthFilter;
 import io.dropwizard.Application;
 import io.dropwizard.auth.AuthDynamicFeature;
 import io.dropwizard.auth.AuthValueFactoryProvider;

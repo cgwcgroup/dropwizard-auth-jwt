@@ -1,4 +1,4 @@
-package com.github.toastshaman.dropwizard.auth.jwt;
+package com.github.cgwcgroup.dropwizard.auth.jwt;
 
 import com.codahale.metrics.MetricRegistry;
 import com.google.common.base.Throwables;

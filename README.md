@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/ToastShaman/dropwizard-auth-jwt.svg?branch=master)](https://travis-ci.org/ToastShaman/dropwizard-auth-jwt)
-[![Maven Central](https://img.shields.io/maven-central/v/com.github.toastshaman/dropwizard-auth-jwt.svg)](http://mvnrepository.com/artifact/com.github.toastshaman/dropwizard-auth-jwt)
 
 # dropwizard-auth-jwt
 
@@ -43,14 +41,14 @@ To use this library in your project you can download it from Maven Central.
 
 ```xml
 <dependency>
-    <groupId>com.github.toastshaman</groupId>
+    <groupId>com.github.cgwcgroup</groupId>
     <artifactId>dropwizard-auth-jwt</artifactId>
     <version>1.1.2-0</version>
 </dependency>
 ```
 
 ## Example
-See this [code example](https://github.com/ToastShaman/dropwizard-auth-jwt/tree/master/src/test/java/com/github/toastshaman/dropwizard/auth/jwt/example) 
+See this [code example](https://github.com/cgwcgroup/dropwizard-auth-jwt/tree/master/src/test/java/com.github.cgwcgroup/dropwizard/auth/jwt/example) 
 if you want to use this code your dropwizard application. Once you have started the example application here are some 
 sample requests to generate a valid and an expired token:
 

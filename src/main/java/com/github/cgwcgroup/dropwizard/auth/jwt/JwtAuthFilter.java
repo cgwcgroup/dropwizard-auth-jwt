@@ -1,4 +1,4 @@
-package com.github.toastshaman.dropwizard.auth.jwt;
+package com.github.cgwcgroup.dropwizard.auth.jwt;
 
 import io.dropwizard.auth.AuthFilter;
 import io.dropwizard.auth.AuthenticationException;

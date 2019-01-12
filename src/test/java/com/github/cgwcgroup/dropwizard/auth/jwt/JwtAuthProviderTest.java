@@ -1,4 +1,4 @@
-package com.github.toastshaman.dropwizard.auth.jwt;
+package com.github.cgwcgroup.dropwizard.auth.jwt;
 
 import com.google.common.base.Throwables;
 import com.google.common.collect.ImmutableList;

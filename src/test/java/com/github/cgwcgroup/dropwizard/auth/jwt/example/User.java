@@ -1,4 +1,4 @@
-package com.github.toastshaman.dropwizard.auth.jwt.example;
+package com.github.cgwcgroup.dropwizard.auth.jwt.example;
 
 public class User {
 
