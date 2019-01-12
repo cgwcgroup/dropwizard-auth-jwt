@@ -88,10 +88,10 @@ public class JwtAuthFilter<P extends Principal> extends AuthFilter<JwtContext, P
         return consumer.process(rawToken);
     }
 
-    public Optional<Principal> verifyAndAuthenticateToken(String rawToken) {
+    public Optional<P> verifyAndAuthenticateToken(String rawToken) {
         try {
             final JwtContext jwtContext = consumer.process(rawToken);
-            return (Optional<Principal>) authenticator.authenticate(jwtContext);
+            return authenticator.authenticate(jwtContext);
         } catch (InvalidJwtException ex) {
             LOGGER.warn("Error decoding credentials: " + ex.getMessage(), ex);
         } catch (AuthenticationException ex) {
