@@ -88,6 +88,19 @@ public class JwtAuthFilter<P extends Principal> extends AuthFilter<JwtContext, P
         return consumer.process(rawToken);
     }
 
+    public Optional<Principal> verifyAndAuthenticateToken(String rawToken) {
+        try {
+            final JwtContext jwtContext = consumer.process(rawToken);
+            return (Optional<Principal>) authenticator.authenticate(jwtContext);
+        } catch (InvalidJwtException ex) {
+            LOGGER.warn("Error decoding credentials: " + ex.getMessage(), ex);
+        } catch (AuthenticationException ex) {
+            LOGGER.warn("Error authenticating credentials", ex);
+            throw new InternalServerErrorException();
+        }
+        throw new WebApplicationException(unauthorizedHandler.buildResponse(prefix, realm));
+    }
+
     private Optional<String> getTokenFromCookieOrHeader(ContainerRequestContext requestContext) {
         final Optional<String> headerToken = getTokenFromHeader(requestContext.getHeaders());
         return headerToken.isPresent() ? headerToken : getTokenFromCookie(requestContext);
